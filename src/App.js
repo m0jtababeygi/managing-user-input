@@ -2,6 +2,7 @@ import './App.css';
 import AddUser from './components/Users/AddUser';
 import UserLists from './components/Users/UsersList';
 import {useState} from 'react';
+import { Fragment } from 'react';
 
 function App(props) {
   const [usersList, setUsersList] = useState([]);
@@ -13,10 +14,10 @@ function App(props) {
   };
 
   return (
-    <div>
+    <Fragment>
       <AddUser onAddUser={addUserHandler} />
       <UserLists users={usersList} />
-    </div>
+    </Fragment>
   );
 }
 
